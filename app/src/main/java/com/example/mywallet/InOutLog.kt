@@ -9,7 +9,10 @@ import java.util.*
 
 class InOutLog(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    val amount:Currency,
+    val amount: Float,
     val type: Int, //1 = income and 0 = expenditure
-    val created_at: Date
+    val created_at: Long = System.currentTimeMillis()
 )
+{
+
+}

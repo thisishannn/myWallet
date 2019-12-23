@@ -19,12 +19,12 @@ abstract class InOutLogDatabase : RoomDatabase() {
         fun getDatabase(context: Context): InOutLogDatabase {
             val tempDB = INSTANCE
             if (tempDB != null) {
-                tempDB = INSTANCE
+                return tempDB
             }
 
 
             synchronized(this) {
-                val instance = Room.databaseBuilder()
+                val instance = Room.databaseBuilder(
                 context.applicationContext,
                 InOutLogDatabase::class.java,
                 "inoutlog_db"
