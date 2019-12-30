@@ -40,8 +40,10 @@ class AddActivity : AppCompatActivity() {
         finish()
 
     }
-    companion object
-    const val AMOUNT = "com.example.mywallet.amount"
-    const val TYPE = "com.example.mywallet.type"
+    companion object{
+        const val AMOUNT = "com.example.mywallet.amount"
+        const val TYPE = "com.example.mywallet.type"
+    }
+
 
 }
